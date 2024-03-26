@@ -3,8 +3,12 @@ import java.util.ArrayList;
 public class Workstation extends PC {
     private String os;
 
-    Workstation(int ram, float cpuFrequency, float screenSize,float hddSize, String os) {
+    Workstation(int ram, float cpuFrequency, float screenSize,int hddSize, String os) {
         super(ram, cpuFrequency, screenSize, hddSize);
+        this.os = os;
+    }
+    Workstation(PCTower tower, PCScreen screen, HDD hdd, String os) {
+        super(tower, screen,hdd);
         this.os = os;
     }
 

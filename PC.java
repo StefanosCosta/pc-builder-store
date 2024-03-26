@@ -5,11 +5,18 @@ public class PC {
     private PCScreen screen;
     private PCTower tower;
 
-    PC(int ram, float cpuFrequency, float screenSize, float hddSize) {
+    PC(int ram, float cpuFrequency, float screenSize, int hddSize) {
         // super(ram, cpuFrequency);
         this.hdd = new HDD(hddSize);
         this.screen = new PCScreen(screenSize); 
         this.tower = new PCTower(ram, cpuFrequency);
+    }
+
+    PC(PCTower tower, PCScreen screen, HDD hdd) {
+        // super(ram, cpuFrequency);
+        this.hdd = hdd;
+        this.screen = screen; 
+        this.tower = tower;
     }
 
     public String printScreenSize() {
