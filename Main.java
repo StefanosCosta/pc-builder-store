@@ -32,22 +32,27 @@ class Main {
 				case 1:
 					PCTower tower = ui.getPCTowerDetails();
 					System.out.println("Here are your order details");
+					System.out.println("PC Tower");
+					System.out.println(tower.GetRamDetails());
 					System.out.println(tower.GetCpuDetails());
-					System.out.println(tower.GetCpuFrequency());
+					break;
 				case 2:
 					PCScreen screen = ui.getPCScreenDetails();
 					System.out.println("Here are your order details");
 					System.out.println(screen.getScreenSize());
+					break;
 
 				case 3:
 					PC pc = ui.getPCDetails();
 					System.out.println("Here are your order details");
 					System.out.println(pc.getPCDetails());
+					break;
 
 				case 4:
 					Workstation workstation = ui.getWorkstationDetails();
 					System.out.println("Here are your order details");
 					System.out.println(workstation.getPCDetails());
+					break;
 			}
 			number = 0;
 			

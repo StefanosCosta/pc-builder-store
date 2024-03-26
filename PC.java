@@ -27,8 +27,8 @@ public class PC {
         return "HDD: " + hdd.printHddDetails();
     }
     public ArrayList<String> printPCTower() {
-        String ramDetails = "RAM: " + tower.GetRamDetails();
-        String cpuDetails = "CPU Clock: " + tower.GetCpuDetails();
+        String ramDetails = tower.GetRamDetails();
+        String cpuDetails = tower.GetCpuDetails();
         ArrayList<String> details = new ArrayList<>();
         details.add(ramDetails);
         details.add(cpuDetails);

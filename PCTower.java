@@ -20,10 +20,10 @@ public class PCTower {
     }
 
     String GetRamDetails() {
-        return Integer.toString(ramSize) +  " " + ramUnits;
+        return "RAM: " + Integer.toString(ramSize) +  " " + ramUnits;
     }
 
     String GetCpuDetails() {
-        return Float.toString(cpuFrequency) +  " " + cpuFrequencyUnits;
+        return "CPU: " + Float.toString(cpuFrequency) +  " " + cpuFrequencyUnits;
     }
 }
