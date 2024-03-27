@@ -36,12 +36,10 @@ class Main {
 					break;
 			}
 
-			System.out.println("Would you like to place another order? (y/n)");
+			ui.exitQuestion();
 			if (!ui.retrieveYesOrNoAnswer()) {
 				break;
 			}
-			number = 0;
 		}
-	
 	}
 }

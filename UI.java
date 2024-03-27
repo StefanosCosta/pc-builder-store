@@ -2,8 +2,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class UI {
-    Scanner scan = new Scanner(System.in);
-    HashMap<Integer,String> osMap = new HashMap<>();
+    private Scanner scan = new Scanner(System.in);
+    private HashMap<Integer,String> osMap = new HashMap<>();
 
     // initialize map for operating Systems
     UI() {
@@ -57,7 +57,11 @@ public class UI {
         this.emptyLine();
     }
 
-    public void invalidInput() {
+    public void exitQuestion() {
+        System.out.println("Would you like to place another order? (y/n)");
+    }
+
+    private void invalidInput() {
         System.out.println("Invalid Input... Please try again");
     }
 
@@ -65,16 +69,12 @@ public class UI {
         System.out.println("");
     }
 
-    public void invalidInputIntRange(int min, int max) {
+    private void invalidInputIntRange(int min, int max) {
         System.out.printf("Input must be between %d and %d\n", min, max);
     }
 
-    public void invalidInputFloatRange(float min, float max) {
+    private void invalidInputFloatRange(float min, float max) {
         System.out.printf("Input must be between %f and %f\n", min, max);
-    }
-
-    public void enterScreenSize() {
-        System.out.println("Input is invalid or out of range... Please try again");
     }
 
     // functions that retrieve data from console:
@@ -125,7 +125,7 @@ public class UI {
                     this.invalidInputFloatRange(min, max);
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Input must be an integer");
+                System.out.println("Input must be a decimal");
             }
         }
         return number;
