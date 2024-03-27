@@ -5,6 +5,7 @@ public class UI {
     Scanner scan = new Scanner(System.in);
     HashMap<Integer,String> osMap = new HashMap<>();
 
+    // initialize map for operating Systems
     UI() {
         osMap.put(1, "Windows");
         osMap.put(2, "Linux");
@@ -16,42 +17,52 @@ public class UI {
     }
 
     public void printOptions() {
+        this.emptyLine();
         System.out.print("Select one of the following options by entering your choice on the screen\n" + //
                         "\t1. PC tower\n" + //
                         "\t2. PC screen\n" + //
                         "\t3. Personal Computer\n" + //
                         "\t4. Workstation\n");
+        this.emptyLine();
     }
 
     public void printPCTowerComponents() {
         System.out.print("The PC Tower consists of\n" + //
                         "\t1. Memory Size (RAM) - integer\n" + //
                         "\t2. CPU Frequency - 2 d.p.\n");
+        this.emptyLine();
     }
     public void printPCScreenComponents() {
         System.out.print("The PC Screen consists of\n" + //
                         "\t1. Screen Size (inches) - 1 d.p. \n");
+        this.emptyLine();
     }
     
     public void printPCComponents() {
         System.out.print("The Personal Computer consists of\n" + //
         "\t1. Memory Size (RAM) - integer\n" + //
-        "\t2. CPU Frequency - 2 d.p." + //
+        "\t2. CPU Frequency - 2 d.p.\n" + //
         "\t3. Screen Size (inches) - 1 d.p. \n" + //
         "\t4. HDD Size (GB) - integer\n");
+        this.emptyLine();
     }
 
     public void printWorkstationComponents() {
         System.out.print("The Workstation consists of\n" + //
         "\t1. Memory Size (RAM) - integer\n" + //
-        "\t2. CPU Frequency - 2 d.p." + //
+        "\t2. CPU Frequency - 2 d.p.\n" + //
         "\t3. Screen Size (inches) - 1 d.p. \n" + //
-        "\t4. HDD Size (GB) - integer" + //
+        "\t4. HDD Size (GB) - integer\n" + //
         "\t5. Operating System (Windows or Linux)\n");
+        this.emptyLine();
     }
 
     public void invalidInput() {
         System.out.println("Invalid Input... Please try again");
+    }
+
+    private void emptyLine() {
+        System.out.println("");
     }
 
     public void invalidInputIntRange(int min, int max) {
@@ -122,7 +133,7 @@ public class UI {
 
   
     // Component order processing functions:
-    
+
     public PCTower getPCTowerDetails() {
         int ram = 0;
         float cpuFrequency = 0;
@@ -179,33 +190,41 @@ public class UI {
     // Order printing functions:
 
     public void printPCTowerOrder(PCTower tower) {
+        this.emptyLine();
         System.out.println("Here are your order details:");
         System.out.println("1x PC Tower:");
         System.out.println(tower.GetRamDetails());
         System.out.println(tower.GetCpuDetails());
+        this.emptyLine();
     }
 
     public void printPCScreenOrder(PCScreen screen) {
+        this.emptyLine();
         System.out.println("Here are your order details:");
         System.out.println("1x Screen:");
         System.out.println(screen.getScreenSize());
+        this.emptyLine();
     }
 
     public void printPCOrder(PC pc) {
+        this.emptyLine();
         System.out.println("Here are your order details:");
         System.out.println("1x Personal Computer:");
         for (String i : pc.getPCDetails() ){
             System.out.println(i);
         }
+        this.emptyLine();
     }
 
 
     public void printWorkstationOrder(Workstation workstation) {
+        this.emptyLine();
         System.out.println("Here are your order details:");
         System.out.println("1x Workstation:");
         for (String i : workstation.printWorkStation() ) {
             System.out.println(i);
         }
+        this.emptyLine();
     }
 
 }
