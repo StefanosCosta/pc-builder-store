@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * The Workstation class is inherits from pc as it is a pc with an operating system.
+ * It contains 2 constructors for any possible future use
+ */
 public class Workstation extends PC {
     private String os;
 
@@ -7,6 +11,7 @@ public class Workstation extends PC {
         super(ram, cpuFrequency, screenSize, hddSize);
         this.os = os;
     }
+
     Workstation(PCTower tower, PCScreen screen, HDD hdd, String os) {
         super(tower, screen,hdd);
         this.os = os;

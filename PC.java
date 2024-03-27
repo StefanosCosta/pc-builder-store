@@ -1,19 +1,21 @@
 import java.util.ArrayList;
 
+
+/**
+ * The PC class contains a hard drive, a pc screen and a pc tower.
+ */
 public class PC {
     private HDD hdd;
     private PCScreen screen;
     private PCTower tower;
 
     PC(int ram, float cpuFrequency, float screenSize, int hddSize) {
-        // super(ram, cpuFrequency);
         this.hdd = new HDD(hddSize);
         this.screen = new PCScreen(screenSize); 
         this.tower = new PCTower(ram, cpuFrequency);
     }
 
     PC(PCTower tower, PCScreen screen, HDD hdd) {
-        // super(ram, cpuFrequency);
         this.hdd = hdd;
         this.screen = screen; 
         this.tower = tower;
@@ -26,6 +28,7 @@ public class PC {
     public String printHDDContents() {
         return "HDD: " + hdd.printHddDetails();
     }
+
     public ArrayList<String> printPCTower() {
         String ramDetails = tower.GetRamDetails();
         String cpuDetails = tower.GetCpuDetails();

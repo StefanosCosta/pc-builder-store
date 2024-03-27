@@ -1,3 +1,6 @@
+/**
+ * The PC Tower class consists of ramsize and cpu frequency along with their units
+ */
 public class PCTower {
     private int ramSize;
     private String ramUnits;

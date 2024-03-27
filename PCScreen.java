@@ -1,3 +1,6 @@
+/**
+ * The PCScreen contains a simple screen size variable.
+ */
 public class PCScreen {
     private float screenSize;
 
